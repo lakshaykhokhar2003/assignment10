@@ -6,7 +6,7 @@ import { Menu, Phone } from "lucide-react";
 
 const Navbar = () => {
     return (
-        <div className="sticky top-0 py-6 px-10 flex justify-between items-center rounded-md shadow-md max-lg:p-4 bg-white z-50">
+        <div className="sticky top-0 py-6 px-10 flex justify-between items-center rounded-md shadow-md bg-white z-50 max-lg:p-4">
             <Image
                 src="/logo.svg"
                 alt="logo"
