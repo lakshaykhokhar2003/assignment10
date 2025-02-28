@@ -12,7 +12,7 @@ export const schema = z.object({
   firstName: z.string().min(1, "First name is required"),
   lastName: z.string().min(1, "Last name is required"),
   email: z.string().email("Please enter a valid email"),
-  phone: z.string().min(10, "Please enter a valid phone number")
+  phone: z.string().min(10, "Please enter a 10 digit phone number")
 });
 
 export const fields: fieldProps[] = [
