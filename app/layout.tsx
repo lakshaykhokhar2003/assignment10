@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import React from "react";
 import Footer from "@/components/Footer";
+import {Toaster} from "sonner";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -33,6 +34,7 @@ export default function RootLayout({
     <body
         className={`${poppins.variable} ${roboto.variable} antialiased`}
     >
+    <Toaster position="top-right"/>
     <div id="loading-root"/>
     <Navbar/>
     <main className="min-h-screen">

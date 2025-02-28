@@ -1,7 +1,8 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import {featureProps, fieldProps} from "@/types";
+import {featureProps, fieldProps, toastProps} from "@/types";
 import {z} from "zod";
+import {toast} from "sonner";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -56,3 +57,5 @@ export const features:featureProps[]  = [
 export const images = ["/store.png","/working.png","/docks.png","/lobby.png"]
 
 export const carouselImage = ["/background.png", "/store.png", "/docks.png",];
+
+export const toastNotification = ({type, message}: toastProps) => toast[type](message)

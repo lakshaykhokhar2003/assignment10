@@ -24,3 +24,8 @@ export type featureProps = {
     title: string;
     description: string;
 }
+
+export type toastProps = {
+    type: 'success' | 'error' | 'info' | 'warning',
+    message: string
+}

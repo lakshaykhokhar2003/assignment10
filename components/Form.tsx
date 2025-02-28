@@ -4,7 +4,7 @@ import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {Button} from "@/components/ui/button";
 import {formFields} from "@/types";
-import {schema} from "@/lib/utils";
+import {schema, toastNotification} from "@/lib/utils";
 import {renderFields} from "@/lib/formFields";
 import {ChevronRight} from "lucide-react";
 import {useMediaQuery} from "react-responsive";
@@ -13,6 +13,7 @@ export default function Form() {
     const isPhone = useMediaQuery({maxWidth: 640});
     const {
         register,
+        reset,
         handleSubmit,
         formState: {errors},
     } = useForm<formFields>({
@@ -22,6 +23,8 @@ export default function Form() {
 
     const onSubmit = (data: formFields) => {
         console.log("Form submitted:", data);
+        reset();
+        toastNotification({type: "success", message: "Step 1: Completed"});
     };
 
     return (
