@@ -12,7 +12,7 @@ export const schema = z.object({
   firstName: z.string().min(1, "First name is required"),
   lastName: z.string().min(1, "Last name is required"),
   email: z.string().email("Please enter a valid email"),
-  phone: z.string().min(10, "Invalid phone number"),
+  phone: z.string().min(10, "Please enter a valid phone number")
 });
 
 export const fields: fieldProps[] = [
@@ -33,7 +33,7 @@ export const fields: fieldProps[] = [
   },
   {
     name: "phone",
-    type: "number",
+    type: "tel",
     placeholder: "Phone Number (Just so we can remind you of your appt)"
   }
 ]
